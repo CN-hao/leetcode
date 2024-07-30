@@ -40,7 +40,6 @@ public:
         sort(points.begin(),points.end(),cmp); 
         int n=0;
         auto it=points.begin();
-    
         while(it!=points.end()){
             ++n;
             it=upper_bound(it,points.end(),vector<int>{(*it)[0]+w,0},cmp);
