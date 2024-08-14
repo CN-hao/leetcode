@@ -25,7 +25,6 @@ using namespace std;
 #include <vector>
 // @lcpr-template-end
 // @lc code=start
-//水
 class Solution {
 public:
     bool isArraySpecial(vector<int>& nums) {
