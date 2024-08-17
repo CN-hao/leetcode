@@ -33,9 +33,7 @@ public:
         for(int i = 0; i < word.size(); i+=k) {
             string s = word.substr(i, k);
             map[s]++;
-            if(map[s]>max) {
-                max = map[s];
-            }
+            max = std::max(max, map[s]);
         }
         return word.size()/k -max;
     }
