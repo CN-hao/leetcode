@@ -27,7 +27,7 @@ using namespace std;
 // @lc code=start
 
 //水
-
+//可以少写一个循环
 class Solution {
 public:
     long long sumDigitDifferences(vector<int>& nums) {
