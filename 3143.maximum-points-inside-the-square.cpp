@@ -54,7 +54,7 @@ public:
                 min_no=min(t,min_no);
             }
         }
-        return ranges::count_if(yes,[&](unsigned int x){return x<min_no;});
+        return count_if(yes.begin(),yes.end(),[&](unsigned int x){return x<min_no;});
 
     }
 };

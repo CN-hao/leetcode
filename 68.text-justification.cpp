@@ -36,7 +36,7 @@ public:
         vector<string> ans;
         for(i=0;i<words.size();++i){
             if(width+word_count+words[i].size()>maxWidth){
-                string temp(maxWidth,' ');
+                string temp(maxWidth,' ');  
                 auto spaces=maxWidth-width;
                 size_t idx=0;
                 for(size_t j=0;j<word_count;++j){
