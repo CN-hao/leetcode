@@ -1,8 +1,8 @@
 /*
- * @lc app=leetcode.cn id=38 lang=cpp
+ * @lc app=leetcode.cn id=45 lang=cpp
  * @lcpr version=30204
  *
- * [38] 外观数列
+ * [45] 跳跃游戏 II
  */
 
 
@@ -27,22 +27,22 @@ using namespace std;
 // @lc code=start
 class Solution {
 public:
-    string countAndSay(int n) {
-        string s = "1";
-        for(int i=2;i<=n;++i){
-            string t;
-            int cnt = 1;
-            for(int i=0;i<s.size();++i){
-                if(i!=s.size()&& s[i]==s[i+1]){
-                    ++cnt;
-                }else{
-                    t.append(to_string(cnt)+s[i]);
-                    cnt = 1;
-                }
+    int jump(vector<int>& nums) {
+        int end=0;
+        int max=0;
+        int c=0;
+        for(int i=0;i<nums.size();++i){
+            if(i+nums[i]>max){
+                max = i+nums[i];
+                if(i==nums.size()-1) return c;
+                if(max>=nums.size()-1) return c+1;
             }
-            s = t;
+            if(i==end){
+                end=max;
+                ++c;
+            }
         }
-        return s;
+        return 0;
     }
 };
 // @lc code=end
@@ -51,11 +51,11 @@ public:
 
 /*
 // @lcpr case=start
-// 4\n
+// [2,3,1,1,4]\n
 // @lcpr case=end
 
 // @lcpr case=start
-// 1\n
+// [2,3,0,1,4]\n
 // @lcpr case=end
 
  */

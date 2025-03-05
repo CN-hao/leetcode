@@ -1,8 +1,8 @@
 /*
- * @lc app=leetcode.cn id=38 lang=cpp
+ * @lc app=leetcode.cn id=322 lang=cpp
  * @lcpr version=30204
  *
- * [38] 外观数列
+ * [322] 零钱兑换
  */
 
 
@@ -27,22 +27,7 @@ using namespace std;
 // @lc code=start
 class Solution {
 public:
-    string countAndSay(int n) {
-        string s = "1";
-        for(int i=2;i<=n;++i){
-            string t;
-            int cnt = 1;
-            for(int i=0;i<s.size();++i){
-                if(i!=s.size()&& s[i]==s[i+1]){
-                    ++cnt;
-                }else{
-                    t.append(to_string(cnt)+s[i]);
-                    cnt = 1;
-                }
-            }
-            s = t;
-        }
-        return s;
+    int coinChange(vector<int>& coins, int amount) {
     }
 };
 // @lc code=end
@@ -51,11 +36,15 @@ public:
 
 /*
 // @lcpr case=start
-// 4\n
+// [1, 2, 5]\n11\n
 // @lcpr case=end
 
 // @lcpr case=start
-// 1\n
+// [2]\n3\n
+// @lcpr case=end
+
+// @lcpr case=start
+// [1]\n0\n
 // @lcpr case=end
 
  */

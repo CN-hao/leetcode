@@ -1,8 +1,8 @@
 /*
- * @lc app=leetcode.cn id=38 lang=cpp
+ * @lc app=leetcode.cn id=29 lang=cpp
  * @lcpr version=30204
  *
- * [38] 外观数列
+ * [29] 两数相除
  */
 
 
@@ -27,22 +27,8 @@ using namespace std;
 // @lc code=start
 class Solution {
 public:
-    string countAndSay(int n) {
-        string s = "1";
-        for(int i=2;i<=n;++i){
-            string t;
-            int cnt = 1;
-            for(int i=0;i<s.size();++i){
-                if(i!=s.size()&& s[i]==s[i+1]){
-                    ++cnt;
-                }else{
-                    t.append(to_string(cnt)+s[i]);
-                    cnt = 1;
-                }
-            }
-            s = t;
-        }
-        return s;
+    int divide(int dividend, int divisor) {
+
     }
 };
 // @lc code=end
@@ -51,11 +37,11 @@ public:
 
 /*
 // @lcpr case=start
-// 4\n
+// 10\n3\n
 // @lcpr case=end
 
 // @lcpr case=start
-// 1\n
+// 7\n-3\n
 // @lcpr case=end
 
  */

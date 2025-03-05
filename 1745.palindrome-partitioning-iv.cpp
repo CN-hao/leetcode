@@ -26,6 +26,8 @@ using namespace std;
 #include <string>
 // @lcpr-template-end
 // @lc code=start
+//感觉不算困难题目，回文字符串没有考虑到可以使用动态规划。
+//但是我的题解使用空间少了O(n),也算有点可取之处。
 class Solution {
 
 bool isPalindrome(string::iterator begin, string::iterator end){
