@@ -28,21 +28,14 @@ using namespace std;
 class Solution {
 public:
     int findKthLargest(vector<int>& nums, int k) {
-        if(nums.size()==1) return nums[0];
         int beg=0,end=nums.size()-1;
+        int i,j,p;
         while(beg<=end){
-            int mid=beg;
-            int i=beg-1;
-            int j=end+1;
-            while(i<j){
-                do ++i; while(nums[i]>nums[mid]);
-                do --j; while(nums[j]<nums[mid]);
-                if(i<j) swap(nums[i],nums[j]);
-            }
-            if(j+1==k) return nums[mid];
-            swap(nums[mid],nums[j]);
-            if(k>j+1) beg=j+1;
-            else end=j-1;
+            p=nums[end];
+            for(j=i=beg;j<end;++j)if(nums[j]>p) swap(nums[i++],nums[j]);
+            if(i+1==k) return p;
+            swap(nums[i],nums[end]);
+            i+1<k?beg=i+1:end=i-1;
         }
         return -9999;
     }
