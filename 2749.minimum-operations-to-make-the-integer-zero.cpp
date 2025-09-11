@@ -43,7 +43,7 @@ public:
                 return i;
             }
         }
-        return -1;
+        return 2;
     }
 };
 // @lc code=end
