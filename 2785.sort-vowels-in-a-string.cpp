@@ -26,6 +26,7 @@ using namespace std;
 // @lcpr-template-end
 // @lc code=start
 class Solution {
+    //by嚆嚆想进厂
 public:
     string sortVowels(string s) {
         unsigned short cnt[58] = {0};
@@ -46,7 +47,7 @@ public:
             {
                 while (cnt[t] == 0) ++t;
                 s[i] = (char)(t + 'A');
-                --cnt[t];
+                cnt[t] -= 1;
             }
         }
         return s;
